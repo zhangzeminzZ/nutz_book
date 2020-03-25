@@ -8,9 +8,10 @@ import org.nutz.mvc.annotation.*;
  * @date 2020/3/9 11:04
  */
 @IocBean
+@SetupBy(value=MainSetup.class)
 @Modules(scanPackage = true,packages = {"com.zhangzemin"})
 @Encoding(output = "UTF-8",input = "UTF-8")
-@ChainBy(args = {"conf/config.js"})
+@ChainBy(args = {"conf/ioc/config.js"})
 @IocBy(args={"*js", "conf/",
         "*anno", "com.zhangzemin",
         "*async",
